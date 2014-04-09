@@ -32,7 +32,7 @@ describe("Temperature", function() {
 		});
 
     it("converts body temperature", function() {	
-			expect(c2f(37)).toBeCloseTo(98.6);
+			expect(c2f(37)).toEqual(98.6);
 			// Why do we need to use toBeCloseTo? 
 			// To avoid floating point precision errors.
 			// See http://en.wikipedia.org/wiki/Floating_point#Accuracy_problems
