@@ -96,7 +96,7 @@ describe("Loops", function() {
 			});
 			
 			// Advanced. Change "xit" to "it" to run this test.
-			xit("skips properties of the object's prototype", function() {
+			it("skips properties of the object's prototype", function() {
 				var Alphabet = function() { 
 					this.a = 1;
 					this.b = 2;
@@ -112,12 +112,22 @@ describe("Loops", function() {
   // See http://en.wikipedia.org/wiki/Factorial
   // You can either use iteration (loops) or recursion. 
   // (Recursion is easier, but might blow your mind.)
-  describe("factorial", function() {
-    it("computes the factorial of 0");
-    it("computes the factorial of 1");
-    it("computes the factorial of 2");
-    it("computes the factorial of 5");
-    it("computes the factorial of 10");
-  });
+    describe("factorial", function() {
+        it("computes the factorial of 0", function() {
+            expect(factorial(0)).toEqual(1);
+        });
+        it("computes the factorial of 1", function() {
+            expect(factorial(1)).toEqual(1);
+        });
+        it("computes the factorial of 2", function() {
+            expect(factorial(2)).toEqual(2);
+        });
+        it("computes the factorial of 5", function() {
+            expect(factorial(5)).toEqual(120);
+        });
+        it("computes the factorial of 10", function() {
+            expect(factorial(10)).toEqual(3628800);
+        });
+    });
   
 });
