@@ -46,9 +46,15 @@ describe("BouncingBall", function() {
 			expect(ball.div.style.top).toEqual("0px");
 		});
 		
-		it("has a velocity");
+	    it("has a velocity", function() {
+		expect(ball.velocity).toEqual(10);
+	    });
 		
-		it("moves");
+	    it("moves", function() {
+		ball.move(11, 222);
+		expect(ball.div.style.left).toEqual("11px");
+		expect(ball.div.style.top).toEqual("222px");
+	    });
 		
 		it("sets a timeout to move again");
 
